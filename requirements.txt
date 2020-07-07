@@ -4,5 +4,4 @@ python-json-logger
 structlog
 flask
 gunicorn
-gevent
 apscheduler
