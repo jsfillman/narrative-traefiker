@@ -10,7 +10,8 @@ COPY requirements.txt /requirements.txt
 # RUN pip install requests docker python-json-logger structlog && \
 RUN apk add gcc musl-dev linux-headers libffi-dev && \
     pip3 install --upgrade pip && \
-    pip install -r /requirements.txt && \
+    pip3 install -r /requirements.txt && \
+    pip3 install --no-binary gevent && \
     apk del gcc musl-dev linux-headers libffi-dev
 
 COPY *.py logging.conf *.conf /app/
