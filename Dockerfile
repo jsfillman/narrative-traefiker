@@ -8,10 +8,10 @@ ARG BRANCH
 COPY requirements.txt /requirements.txt
 
 # RUN pip install requests docker python-json-logger structlog && \
-RUN apk add gcc && \
+RUN apk add gcc python3-dev && \
     pip3 install --upgrade pip && \
     pip install -r /requirements.txt && \
-    apk del gcc
+    apk del gcc python3-dev
 
 COPY *.py logging.conf *.conf /app/
 
