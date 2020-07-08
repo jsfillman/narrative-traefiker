@@ -1,3 +1,7 @@
+# try to avoid recursion errors with gevent monkeypatching
+import gevent.monkey
+gevent.monkey.patch_all()
+
 import flask
 import requests
 from urllib.parse import quote_plus
