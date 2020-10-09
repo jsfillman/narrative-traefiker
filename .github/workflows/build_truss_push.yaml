@@ -1,5 +1,5 @@
 ---
-name: Build Truss Branch Image
+name: Build Truss Image Push
 'on':
   push:
     branches:
